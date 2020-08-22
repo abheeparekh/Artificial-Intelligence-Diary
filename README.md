@@ -32,7 +32,7 @@ Let M and M+ be the models for dialog-track and knowledge track control respecti
 •	A new entity is added to KB if the marginal probability of knowledge belief over recipient or item is greater than the threshold value. Or the number of entropy fluctuations is higher than the threshold
 •	If the entropy of dialog belief is higher than belief threshold than ask for rewording the original service request. Else use the dialog POMDP to maintain dialog flow. 
 •	Knowledge belief is only updated with confirming questions which invalidate the agent’s hypothesis of unknown entities
-•	Return the request based on the last action and (possibly updated) knowledge base 
+•	Return the request based on the last action and (possibly updated) knowledge base
 
 After knowledge base update POMDP is constructed on-the-fly
 
