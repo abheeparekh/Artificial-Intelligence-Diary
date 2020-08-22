@@ -1,7 +1,7 @@
 # Artificial Intelligence
 In this repository, I will be posting technical papers which I found useful while working on AI and a brief summary about it.
 
-[**Plan Explanations as Model Reconciliation: Moving Beyond Explanation as Soliloquy**] (https://www.ijcai.org/Proceedings/2017/0023.pdf)
+[**Plan Explanations as Model Reconciliation: Moving Beyond Explanation as Soliloquy**](https://www.ijcai.org/Proceedings/2017/0023.pdf)
 
 The paper discusses providing an explanation to humans by AI systems. The explanation is considered a “model reconciliation problem” (MRP), where the AI system suggests changes to the human model, to make its plan optimal for the changed human model. The need arises due to the differences in the model of human and AI system. There are two ways to tackle this problem. The first is to make the AI system “explicable”. But this puts additional constraints on the AI system. The second approach is to make minimal changes to the human model to make it closer to the AI model with the same optimal plan. The plan is stored in PDDL format. The explanation can have characteristics like complete, concise, monotonic, and computable. To compute explanations, A* search is used.
 
