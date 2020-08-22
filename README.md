@@ -28,10 +28,15 @@ Dialog agent consists of two interleaved control loops resulting in a dual-track
 For representing the knowledge base, Answer Set Prolog (ASP) is used. It is a declarative language for knowledge representation. The entropy is a measure of the uncertainty level of the agent’s belief distribution. When the agent is (un)confident about the state, the entropy value is (high) low. In particular, a uniform belief distribution corresponds to the highest entropy level. If the belief entropy is higher than threshold h (meaning the agent is highly uncertain about the dialog state), the human user is encouraged to state the entire request in one sentence. Otherwise, the dialog manager would decide the flow of the conversation. A belief queue is maintained for the last three dialog turns. Entropy fluctuation occurs if the entropy of the second last is the highest or lowest among the three.
 
 Algorithm for knowledge augmentation
+
 Let M and M+ be the models for dialog-track and knowledge track control respectively. The algorithm starts by initializing the two beliefs with uniform distributions. 
+
 •	A new entity is added to KB if the marginal probability of knowledge belief over recipient or item is greater than the threshold value. Or the number of entropy fluctuations is higher than the threshold
+
 •	If the entropy of dialog belief is higher than belief threshold than ask for rewording the original service request. Else use the dialog POMDP to maintain dialog flow. 
+
 •	Knowledge belief is only updated with confirming questions which invalidate the agent’s hypothesis of unknown entities
+
 •	Return the request based on the last action and (possibly updated) knowledge base
 
 After knowledge base update POMDP is constructed on-the-fly
